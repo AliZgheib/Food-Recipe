@@ -77,10 +77,7 @@ body {
   justify-content: flex-start;
   align-items: center;
 }
-#search input,
-#search select {
-  width: 400px;
-}
+
 #search form input {
   margin: 0 10px;
 }
@@ -100,9 +97,13 @@ body {
   padding: 3px 9px;
   margin-left: 10px;
 }
-input[type="number"] {
+
+#search input[type="text"],#search select{
+  width: 400px;
+}
+#search input[type="number"] {
   text-align: center;
-  width: 185px!important;
+  width: 185px;
 }
 .results {
 }
@@ -164,20 +165,11 @@ input[type="number"] {
   }
 
 
-  #search form{
-    display: flex;
-    flex-direction: column;
-    justify-self: flex-start;
-  }
-  #search .form-part {
-width: 100%!important;
-margin:auto
-  }
-  #search input,
-#search select {
+
+#search input[type="text"],#search select{
   width: 100%;
 }
-input[type="number"] {
+#search input[type="number"] {
   text-align: center;
   width: 35%;
 }
