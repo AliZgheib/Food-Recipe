@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  overflow-x: hidden;
+}
+.logo {
+  height: 40px;
+  width: 40px;
+  margin-right: 10px;
+}
+.nav-item {
+  padding: 0 30px;
+}
+#prev,
+#next {
+  height: 45px;
+  width: 45px;
+}
+.jumbotron {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+#about {
+  height: 100vh;
+  width: 90vw;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 350px auto;
+  grid-template-rows: 10% 80% 10%;
+  grid-column-gap: 30px;
+}
+#carouselExampleIndicators {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+#carouselExampleIndicators img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain !important;
+}
+.features {
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+.features ul {
+  margin-top: 35px;
+}
+.features ul li {
+  padding: 10px 0;
+}
+#search {
+  min-height: 100vh;
+  width: 90vw;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+#search form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#search form .form-part {
+  margin: 10px 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+#search form .options {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+#search input,
+#search select {
+  width: 400px;
+}
+#search form input {
+  margin: 0 10px;
+}
+#search .lead {
+  font-size: 30px;
+  margin-bottom: 40px;
+}
+
+#search label {
+  width: 150px;
+  font-size: 15px;
+}
+#search button {
+  margin-top: 30px;
+}
+#search select {
+  padding: 3px 9px;
+  margin-left: 10px;
+}
+.results {
+}
+
+@media only screen and (max-width: 1300px) {
+  .leard {
+    font-size: 15;
+  }
+  #about {
+    height: auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 10% 1fr 10%;
+    grid-template-rows: 1fr 1fr;
+    grid-column-gap: 0;
+    grid-row-gap: 30px;
+  }
+  #carouselExampleIndicators {
+    grid-column: 1/4;
+    grid-row: 1/2;
+    width: 90%;
+    margin: auto;
+  }
+  .features {
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+}
+@media only screen and (max-width: 1179px) {
+  #search input,
+  #search select {
+    width: 250px;
+  }
+}
+@media only screen and (max-width: 800px) {
+  #search {
+    align-items: center;
+  }
+  #search form .form-part {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+  }
+  #search form .form-part label {
+    grid-row: 1/2;
+  }
+
+  #search form .form-part {
+    margin: 5px 0;
+  }
+  #search input,
+  #search select {
+    width: 250px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #search input,
+  #search select {
+    width: 150px;
+  }
+}
