@@ -1,0 +1,28 @@
+{
+  "name": "food-recipe",
+  "version": "1.0.0",
+  "description": "Food Recipe is an app that provides its users with the ability to search the recipe of any food made around the world!",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AliZgheib/Food-Recipe.git"
+  },
+  "author": "Ali Zgheib",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AliZgheib/Food-Recipe/issues"
+  },
+  "homepage": "https://github.com/AliZgheib/Food-Recipe#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.0",
+    "nodemon": "^2.0.4"
+  }
+}
