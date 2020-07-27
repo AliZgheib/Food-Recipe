@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Food Recipe App By Ali Zgheib</title>
+</head>
+<body class="bg-light">
+    <div class="bg-light">
+      <nav class="navbar navbar-expand-lg navbar-primary bg-light">
+        <a class="navbar-brand" href="/"
+          ><img src="images/logo.png" class="logo" />Food Recipe</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarTogglerDemo02"
+          aria-controls="navbarTogglerDemo02"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="/"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="/app.html"
+                  >App <span class="sr-only">(current)</span></a
+                >
+              </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/contact.html">Contact</a>
+            </li>
+          </ul>
+
+        </div>
+      </nav>
+      <div class="main">
+
+    <div id="search">
+        <p class="lead">
+          Search for your meal recipe below:
+        </p>
+        
+        <div id="alert">
+
+        </div>
+        
+        <form action="/submit" method="POST">
+          <div class="form-part">
+            <label for="name">Dish name:</label>
+            <div class="options">
+              <input id="data-name" type="text" autocomplete="off" required placeholder=" ex: pasta, chicken, etc.." />
+            </div>
+          </div>
+          <div class="form-part">
+            <label for="results">Result range:</label>
+            <div class="options">
+              <input
+                id="data-range-from"
+                type="number"
+                value="1"
+                min="1"
+               
+              />-
+              <input
+                id="data-range-to"
+                type="number"
+                value="10"
+                min="1"
+                
+              />
+            </div>
+          </div>
+          <div class="form-part">
+            <label for="cuisine">Cuisine type:</label><br />
+            <div class="options">
+              <input
+                id="data-cuisine"
+                type="text"
+                autocomplete="off"
+                placeholder="ex: indian, chinese, etc.."
+                disabled
+              />
+            </div>
+          </div>
+          <div class="form-part">
+            <label for="meal">Meal type:</label>
+
+            <div class="options">
+              <select name="" id="data-meal" disabled>
+                <option selected disabled hidden></option>
+                <option value="Breakfast">Breakfast</option>
+                <option value="Lunch">Lunch</option>
+                <option value="Dinner">Dinner</option>
+                <option value="Snack">Snack</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-part">
+            <label for="dish">Dish type</label>
+            <div class="options">
+              <input
+                disabled
+                id="data-dish"
+                type="text"
+                placeholder="ex: soup, salad, etc.."
+              />
+            </div>
+          </div>
+          <div class="form-part">
+            <label for="calories">Calories: </label>
+            <div class="options">
+              <input type="number" id="data-calories-from"  placeholder="min value"/>-
+              <input type="number" id="data-calories-to" placeholder="max value" />
+            </div>
+          </div>
+          <div class="form-part">
+            <label for="calories">Preperation time: (in minutes) </label>
+
+            <div class="options">
+              <input type="number" id="data-prep-from" placeholder="min value" />-
+              <input type="number" id="data-prep-to" placeholder="max value" />
+            </div>
+          </div>
+
+          <button type="submit" id="submit" class="btn btn-primary">
+            Search
+          </button>
+        </form>
+      </div>
+      <div class="results"></div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<script src="/scripts/app.js"></script>
+</body>
+</html>

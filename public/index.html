@@ -11,13 +11,12 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
-
     <link rel="stylesheet" href="style.css" />
   </head>
   <body class="bg-light">
     <div class="bg-light">
       <nav class="navbar navbar-expand-lg navbar-primary bg-light">
-        <a class="navbar-brand" href="#"
+        <a class="navbar-brand" href="/"
           ><img src="images/logo.png" class="logo" />Food Recipe</a
         >
         <button
@@ -35,27 +34,23 @@
         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
           <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
             <li class="nav-item active">
-              <a class="nav-link" href="#"
+              <a class="nav-link" href="/"
                 >Home <span class="sr-only">(current)</span></a
               >
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
+            <li class="nav-item ">
+              <a class="nav-link" href="/app.html"
+                >App</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link disabled" href="#">Contact</a>
+              <a class="nav-link" href="/about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/contact.html">Contact</a>
             </li>
           </ul>
-          <form class="form-inline my-2 my-lg-0">
-            <input
-              class="form-control mr-sm-2"
-              type="search"
-              placeholder="Search"
-            />
-            <button class="btn btn-outline-success my-2 my-sm-0" id="search1">
-              Search
-            </button>
-          </form>
+
         </div>
       </nav>
       <div class="main">
@@ -81,9 +76,12 @@
             Our app is free and easy to use. Click below to learn more!
           </p>
           <p class="lead">
-            <a class="btn btn-primary btn-lg" href="#" role="button" id="learn"
-              >Learn more</a
+            <button class="btn btn-primary btn-lg"  id="learn"
+              >Learn more</button
             >
+            <button class="btn btn-outline-success btn-lg" id="search1">
+              Search recipes
+            </button>
           </p>
         </div>
         <div id="about">
@@ -169,94 +167,10 @@
             </a>
           </div>
         </div>
-        <div id="search">
-          <p class="lead">
-            Search for your meal recipe below:
-          </p>
-          <form action="/submit" method="POST">
-            <div class="form-part">
-              <label for="name">Dish name:</label>
-              <div class="options">
-                <input id="data-name" type="text" autocomplete="off" required />
-              </div>
-            </div>
-            <div class="form-part">
-              <label for="results">Result range:</label>
-              <div class="options">
-                <input
-                  id="data-range-from"
-                  type="number"
-                  value="1"
-                  min="1"
-                  max="10"
-                />-
-                <input
-                  id="data-range-to"
-                  type="number"
-                  value="5"
-                  min="1"
-                  max="10"
-                />
-              </div>
-            </div>
-            <div class="form-part">
-              <label for="cuisine">Cuisine type:</label><br />
-              <div class="options">
-                <input
-                  id="data-cuisine"
-                  type="text"
-                  autocomplete="off"
-                  placeholder="ex: indian, chinese, etc.."
-                />
-              </div>
-            </div>
-            <div class="form-part">
-              <label for="meal">Meal type:</label>
 
-              <div class="options">
-                <select name="" id="data-meal">
-                  <option selected disabled hidden></option>
-                  <option value="Breakfast">Breakfast</option>
-                  <option value="Lunch">Lunch</option>
-                  <option value="Dinner">Dinner</option>
-                  <option value="Snack">Snack</option>
-                </select>
-              </div>
-            </div>
-            <div class="form-part">
-              <label for="dish">Dish type</label>
-              <div class="options">
-                <input
-                  id="data-dish"
-                  type="text"
-                  placeholder="ex: soup, salad, etc.."
-                />
-              </div>
-            </div>
-            <div class="form-part">
-              <label for="calories">Calories: </label>
-              <div class="options">
-                <input type="number" id="data-calories-from" />-
-                <input type="number" id="data-calories-to" />
-              </div>
-            </div>
-            <div class="form-part">
-              <label for="calories">Preperation time: (in minutes) </label>
-
-              <div class="options">
-                <input type="number" id="data-prep-from" />-
-                <input type="number" id="data-prep-to" />
-              </div>
-            </div>
-
-            <button type="submit" id="submit" class="btn btn-primary">
-              Search
-            </button>
-          </form>
-        </div>
-        <div class="results"></div>
       </div>
     </div>
+    
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -272,6 +186,6 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
-    <script src="script.js"></script>
+    <script src="/scripts/script.js"></script>
   </body>
 </html>

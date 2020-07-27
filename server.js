@@ -23,14 +23,27 @@ app.get('/submit',(req,res)=>{
     res.end("pog");
 })
 app.post('/submit',(req,res)=>{
-    data=req.body;
+    console.log(req.body)
+    data=req.body.data;
     const Key =process.env.Key;
     const ID=process.env.ID;
+    console.log(data);
+    if(data.name=="")return;
+    let url=`https://api.edamam.com/search?q=${data.name}&app_id=${ID}&app_key=${Key}`
+    if(data.rangeFrom && data.rangeTo)
+    url+=`&from=${data.rangeFrom}&to=${data.rangeTo}`;
+    if(data.cuisine)
+    url+=`&cuisineType=${data.cuisine}`;
+    if(data.meal)
+    url+=`&mealType=${data.meal}`;
+    if(data.dish)
+    url+=`&dishType=${data.dish}`;
+    if(data.calFrom && data.calTo)
+    url+=`&calories=${data.calFrom}-${data.calTo}`;
+    if(data.prepFrom && data.prepTo)
+    url+=`&time=${data.prepFrom}-${data.prepTo}`;
 
-    let url=`https://api.edamam.com/search?q=chicken&app_id=${ID}&app_key=${Key}`
-
-
-
+console.log(url);
     fetch(url)
     .then(response => response.json())
     .then(response => {
