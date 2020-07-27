@@ -86,7 +86,6 @@
             >
           </p>
         </div>
-
         <div id="about">
           <div class="features">
             <h4>Key Features Of Food Recipe:</h4>
@@ -176,7 +175,7 @@
           </p>
           <form action="/submit" method="POST">
             <div class="form-part">
-              <label  for="name">Dish name:</label>
+              <label for="name">Dish name:</label>
               <div class="options">
                 <input id="data-name" type="text" autocomplete="off" required />
               </div>
@@ -184,14 +183,27 @@
             <div class="form-part">
               <label for="results">Result range:</label>
               <div class="options">
-                <input id="data-range-from" type="number" value="1" min="1" max="10"/>- <input id="data-range-to" type="number" value="5" min="1" max="10"/>
+                <input
+                  id="data-range-from"
+                  type="number"
+                  value="1"
+                  min="1"
+                  max="10"
+                />-
+                <input
+                  id="data-range-to"
+                  type="number"
+                  value="5"
+                  min="1"
+                  max="10"
+                />
               </div>
             </div>
             <div class="form-part">
               <label for="cuisine">Cuisine type:</label><br />
               <div class="options">
                 <input
-                id="data-cuisine"
+                  id="data-cuisine"
                   type="text"
                   autocomplete="off"
                   placeholder="ex: indian, chinese, etc.."
@@ -214,14 +226,18 @@
             <div class="form-part">
               <label for="dish">Dish type</label>
               <div class="options">
-                <input id="data-dish" type="text" placeholder="ex: soup, salad, etc.." />
+                <input
+                  id="data-dish"
+                  type="text"
+                  placeholder="ex: soup, salad, etc.."
+                />
               </div>
             </div>
             <div class="form-part">
               <label for="calories">Calories: </label>
               <div class="options">
-                <input type="number" id="data-calories-from"/>-
-                <input type="number" id="data-calories-to"/>
+                <input type="number" id="data-calories-from" />-
+                <input type="number" id="data-calories-to" />
               </div>
             </div>
             <div class="form-part">
@@ -229,11 +245,13 @@
 
               <div class="options">
                 <input type="number" id="data-prep-from" />-
-                <input type="number" id="data-prep-to"/>
+                <input type="number" id="data-prep-to" />
               </div>
             </div>
 
-            <button type="submit" id="submit" class="btn btn-primary">Search</button>
+            <button type="submit" id="submit" class="btn btn-primary">
+              Search
+            </button>
           </form>
         </div>
         <div class="results"></div>

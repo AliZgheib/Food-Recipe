@@ -14,6 +14,10 @@ body {
 .nav-item {
   padding: 0 30px;
 }
+.main {
+  display: flex;
+  flex-direction: column;
+}
 #prev,
 #next {
   height: 45px;
@@ -23,7 +27,6 @@ body {
   height: 100vh;
   display: flex;
   flex-direction: column;
-
 }
 #about {
   height: 100vh;
@@ -31,7 +34,7 @@ body {
   margin: auto;
   display: grid;
   grid-template-columns: 350px auto;
-  grid-template-rows: 10% 80% 10%;
+  grid-template-rows: 5% 90% 5%;
   grid-column-gap: 30px;
 }
 #carouselExampleIndicators {
@@ -56,7 +59,7 @@ body {
 #search {
   min-height: 100vh;
   width: 90vw;
-  margin: auto;
+  margin: 30px auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -98,14 +101,46 @@ body {
   margin-left: 10px;
 }
 
-#search input[type="text"],#search select{
+#search input[type="text"],
+#search select {
   width: 400px;
 }
 #search input[type="number"] {
   text-align: center;
   width: 185px;
 }
+
 .results {
+  width: 90vw;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+.results .meals {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  width: 100%;
+  margin: auto;
+  grid-gap: 10px;
+}
+.results .meals .meal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.results .meals .meal > * {
+  margin: 10px auto;
+}
+.results .meals img {
+  height: 300px;
+  width: 300px;
+  border-radius: 25px;
+}
+
+.results h1 {
+  font-size: 45px;
+  margin: 8px auto 30px auto;
 }
 
 @media only screen and (max-width: 1300px) {
@@ -113,13 +148,17 @@ body {
     font-size: 15;
   }
   #about {
-    height: auto;
+    height: 100vh;
     width: 100%;
     display: grid;
     grid-template-columns: 10% 1fr 10%;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 400px min-content;
     grid-column-gap: 0;
-    grid-row-gap: 30px;
+    grid-row-gap: 40px;
+    margin-bottom: 20px;
+  }
+  #search {
+    height: 100vh;
   }
   #carouselExampleIndicators {
     grid-column: 1/4;
@@ -131,47 +170,55 @@ body {
     grid-column: 2/3;
     grid-row: 2/3;
   }
-
 }
 @media only screen and (max-width: 1179px) {
-
-  
 }
 @media only screen and (max-width: 800px) {
-
   #search form .form-part {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
   }
-  #search form .form-part label {
-    grid-row: 1/2;
+  #search form .form-part .options {
+    display: flex;
+    width: 100%;
+
+    justify-content: center;
+    align-items: center;
   }
 
   #search form .form-part {
     margin: 5px 0;
   }
-  #about ul{
+  #about ul {
     list-style: none;
   }
-  #about{
-    align-items: center ;
-    text-align: center;
+  .jumbotron {
+    height: auto;
   }
+  #about {
+    align-items: center;
+    text-align: center;
+    height: auto;
+    grid-row-gap: 30px;
+    grid-template-rows: min-content min-content;
+  }
+
   #search {
-    justify-content: flex-start;
-    align-items: center ;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     width: 90vw;
+    height: auto;
   }
 
-
-
-#search input[type="text"],#search select{
-  width: 100%;
-}
-#search input[type="number"] {
-  text-align: center;
-  width: 35%;
-}
-
+  #search input[type="text"],
+  #search select {
+    width: 100%;
+  }
+  #search input[type="number"] {
+    text-align: center;
+    width: 45%;
+  }
 }
