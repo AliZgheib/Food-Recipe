@@ -1,0 +1,54 @@
+   <div class="main">
+       <div id="recipe">
+
+           <h1>{{data.label}}</h1>
+           <p><strong>Published by </strong>Ali Zgheib</p>
+
+        <div class="recipe-data">
+            <img src="{{data.image}}" alt="{{data.label}}">
+           <div class="recipe-general">
+                <div class="info">
+                 <h4 class=" text-primary"><strong>Serving: </strong>{{data.yield}}</h4>
+               <h4 class=" text-primary"><strong>Calories: </strong>{{roundNumber data.calories}}</h4>
+                <h4 class=" text-primary"><strong>Preperation time: </strong>{{roundNumber3 data.totalTime}}</h4>
+           
+                    </div>
+                    <hr>
+                    <div class="readmore">
+                        <p class="lead">Interested? </p>
+                        <p>If you found this meal interesting and you would like to read more about it. click the button below!</p>
+                        <a target="_blank" class="btn btn-primary" href="{{data.url}}">Read more</a>
+                        <small>Source: {{data.source}}</small>
+                    </div>
+                </div>
+        </div>
+        <div class="additional-data">
+                <div class="ingredients">
+                <h4 class="text text-primary">Ingredients: </h4>
+                <br>
+                <ul>
+                               
+                {{#each data.ingredientLines}}
+                <li>{{this}}</li>
+                 {{/each}}
+        
+                </ul>
+            </div>
+            <div class="nutrition-facts">
+
+         <h4 class="text text-primary">Nutrition facts:</h4>
+            <table>
+                {{#each data.digest}}     
+                <tr>
+                    <td><strong>{{this.label}}</strong></td>
+                    <td>{{roundNumber this.total}} {{this.unit}}</td>
+                    <td>{{roundNumber2 this.daily}}</td>
+                </tr>
+                {{/each}}
+            </table>
+            </div>
+
+        </div>
+       </div>
+
+</div>

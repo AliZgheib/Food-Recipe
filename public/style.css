@@ -28,8 +28,8 @@ body {
   display: flex;
   flex-direction: column;
 }
-#learn{
-  color:white;
+#learn {
+  color: white;
   cursor: pointer;
 }
 #about {
@@ -61,7 +61,7 @@ body {
   padding: 10px 0;
 }
 #search {
-  min-height: 100vh;
+  min-height: 80vh;
   width: 90vw;
   margin: 30px auto;
   display: flex;
@@ -147,6 +147,63 @@ body {
   margin: 8px auto 30px auto;
 }
 
+#recipe {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#recipe .recipe-data {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  grid-column-gap: 60px;
+  width: 90%;
+  margin: 30px auto;
+}
+#recipe .recipe-data img {
+  height: 350px;
+  width: 400px;
+  margin: auto;
+  border-radius: 25px;
+}
+#recipe .recipe-data .recipe-general {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+}
+#recipe .recipe-general .info h4 {
+  margin: 15px auto;
+}
+#recipe .ingredients li {
+  padding: 7px;
+  font-size: 18px;
+}
+#recipe .nutrition-facts h4 {
+  margin-bottom: 15px;
+}
+#recipe .additional-data {
+  width: 90%;
+  margin: 80px auto 0px auto;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  grid-column-gap: 80px;
+}
+#recipe table {
+  width: 100%;
+}
+#recipe table tr {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  padding: 5px;
+}
+
+.contact {
+  width: 50%;
+  margin: auto;
+}
 @media only screen and (max-width: 1300px) {
   .leard {
     font-size: 15;
@@ -161,9 +218,7 @@ body {
     grid-row-gap: 40px;
     margin-bottom: 20px;
   }
-  #search {
-    height: 100vh;
-  }
+
   #carouselExampleIndicators {
     grid-column: 1/4;
     grid-row: 1/2;
@@ -175,9 +230,10 @@ body {
     grid-row: 2/3;
   }
 }
+
 @media only screen and (max-width: 1179px) {
 }
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 850px) {
   #search form .form-part {
     display: flex;
     width: 100%;
@@ -225,5 +281,27 @@ body {
   #search input[type="number"] {
     text-align: center;
     width: 45%;
+  }
+  #recipe .recipe-data {
+    grid-template-columns: 1fr;
+    grid-row-gap: 50px;
+    grid-template-rows: 1fr 1fr;
+    text-align: center;
+  }
+  #recipe .recipe-data .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  #recipe .additional-data {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto;
+    grid-row-gap: 50px;
+    text-align: center;
+  }
+  #recipe .additional-data ul {
+    list-style: none;
   }
 }
