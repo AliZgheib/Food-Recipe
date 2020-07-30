@@ -47,8 +47,5 @@ app.use(express.static("public"));
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
-  if (result.error) {
-    throw result.error;
-  }
   console.log("App running on port " + PORT);
 });
